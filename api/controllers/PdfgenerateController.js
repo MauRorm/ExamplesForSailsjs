@@ -13,7 +13,7 @@ var request = require('request');
 
 module.exports = {
 	pdf: function (req, res) {
-		var secretToken = 'e18f29e2-6a41-2675-b4cb-4ea553fc8629';
+		var secretToken = 'YourSecretTokenFromInegi';
 		var url = 'http://www3.inegi.org.mx//sistemas/api/indicadores/v1//Indicador/6200012020/00000/es/true/json/' + secretToken;
 		var fileName = 'report';
 		var template = '<meta charset="UTF-8">'+
