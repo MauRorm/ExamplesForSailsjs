@@ -21,6 +21,7 @@
     "grunt-sync": "0.2.4",
     "include-all": "~0.1.6",
     "jsreport": "^1.0.6",
+    "jsreport-ejs": "^1.0.2",
     "path": "^0.12.7",
     "rc": "1.0.1",
     "request": "^2.72.0",
