@@ -27,7 +27,7 @@ module.exports = {
 				if (typeof serialData.Data.Serie[0].SourcesPeriod !== 'undefined') {
 					nameReport = serialData.Data.Serie[0].SourcesPeriod;
 				}
-    		}
+    	}
 			var data = {
 				titleReport: nameReport
 			};
