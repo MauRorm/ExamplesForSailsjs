@@ -16,20 +16,20 @@ module.exports = {
 		var secretToken = 'e18f29e2-6a41-2675-b4cb-4ea553fc8629';
 		var url = 'http://www3.inegi.org.mx//sistemas/api/indicadores/v1//Indicador/6200012020/00000/es/true/json/' + secretToken;
 		var fileName = 'report';
-		var template = '<meta charset="UTF-8">'+
-		'<style> h1 {font-size: 100%;} </style>'+
-		'<h1>Reporte {{:titleReport}}</h1> '+
-		'<hr>';
 		var nameReport;
+		var dataReport;
+		var template = fs.readFileSync(path.resolve(".")+'/assets/templates/'+'template'+'.html').toString();
 		request(url, function (error, response, body) {
 			var serialData = JSON.parse(body);
 			for (var prop in serialData.Data.Serie[0]) {
-				if (typeof serialData.Data.Serie[0].SourcesPeriod !== 'undefined') {
-					nameReport = serialData.Data.Serie[0].SourcesPeriod;
+				if (typeof serialData.Data.Serie[0].NotesPeriod !== 'undefined') {
+					nameReport = serialData.Data.Serie[0].NotesPeriod;
+					dataReport = serialData.Data.Serie[0]. SourcesPeriod;
 				}
     		}
 			var data = {
-				titleReport: nameReport
+				titleReport: nameReport,
+				dataReport: dataReport
 			};
 			jsreport.render({
 				template: {
