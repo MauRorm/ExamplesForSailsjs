@@ -41,7 +41,7 @@ module.exports = {
 			}).then(function(resp) {
 	    		resp.stream.pipe(res);
 	    		resp.stream.pipe(fs.createWriteStream(path.resolve(".")+'/PDF/'+fileName+'.pdf')); /*write pdf file in path*/
-	    		//res.download(path.resolve(".")+'/PDF/'+filename+'.pdf');						   /*download pdf file*/
+	    		//res.download(resp.stream.pipe(fs.createWriteStream('reporte.pdf')));						   /*download pdf file*/
 	  		}).catch(function(e) {    
 	    		res.end(e.message);
 	  		});
