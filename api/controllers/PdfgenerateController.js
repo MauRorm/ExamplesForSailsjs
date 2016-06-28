@@ -7,8 +7,8 @@
  /*http://www.feedhenry.com/server-side-pdf-generation-node-js/*//*url documentation*/
 
 var jsreport = require('jsreport');
-var path=require('path'); //  add path module to get path
-var fs=require('fs'); //  add path module to get path
+var path=require('path'); 	//  add path module to get path
+var fs=require('fs'); 		//  add path module to get path
 var request = require('request');
 
 module.exports = {
